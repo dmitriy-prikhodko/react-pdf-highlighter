@@ -102,7 +102,7 @@ class MouseSelection extends Component<Props, State> {
 
       that.setState({
         ...this.state,
-        end: containerCoords(event.pageX, event.pageY)
+        end: containerCoords(event.x, event.y)
       });
     });
 
@@ -120,7 +120,7 @@ class MouseSelection extends Component<Props, State> {
       onDragStart();
 
       this.setState({
-        start: containerCoords(event.pageX, event.pageY),
+        start: containerCoords(event.x, event.y),
         end: null,
         locked: false
       });
@@ -135,7 +135,7 @@ class MouseSelection extends Component<Props, State> {
           return;
         }
 
-        const end = containerCoords(event.pageX, event.pageY);
+        const end = containerCoords(event.x, event.y);
 
         const boundingRect = that.getBoundingRect(start, end);
 
