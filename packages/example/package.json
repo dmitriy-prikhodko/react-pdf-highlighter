@@ -1,6 +1,6 @@
 {
   "name": "example",
-  "version": "3.3.1",
+  "version": "3.3.0",
   "private": true,
   "dependencies": {
     "react": "^16.13.1",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "SET GENERATE_SOURCEMAP=false && react-scripts build",
     "test": "BROWSER=none jest --maxWorkers=1 -c jest.config.js"
   },
   "eslintConfig": {
